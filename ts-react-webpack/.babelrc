@@ -1,0 +1,6 @@
+{
+    "presets":[
+        "@babel/env","@babel/react","@babel/typescript"
+    ]
+}
+//这里定义一处
