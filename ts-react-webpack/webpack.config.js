@@ -5,11 +5,11 @@ module.exports = {
     mode:"development",
     entry:"./src/index.tsx",
     output:{
-        filename:"bundle.js",
+        filename:"[name].js",
         path:path.resolve(__dirname,"dist/"),
     },
-    // watch:true,
-    devtool:"source-map",
+    // watch:true,这里是监听全部
+    devtool:"source-map",//可能会减慢速度
     resolve:{
         extensions:[".ts",".tsx",".js","json"]
     },
@@ -39,8 +39,7 @@ module.exports = {
         hot:true,
         open:true,
         
-    },
-    
+    },   
     plugins:[
         new webpack.HotModuleReplacementPlugin(),
         new HTMLPlugin ({
